@@ -10,7 +10,19 @@ class MainPage:
         return ft.View(
             "/",
             controls=[
-                ft.Text("Main Page"),
-                ft.ElevatedButton("Order", on_click=lambda _: page.go("/order")),
+                ft.Container(
+                    expand=True,
+                    bgcolor="#EC811CFF",
+                    content=ft.Column(
+                        # expand=True,
+                        controls=[
+                            ft.Text("Main Page"),
+                            ft.ElevatedButton("Заказ", on_click=lambda _: page.go("/order")),
+                            ft.ElevatedButton("Инвентаризация", on_click=lambda _: page.go("/inventory")),
+                            ft.ElevatedButton("Поступление", on_click=lambda _: page.go("/entrance")),
+                        ]
+                    )
+                ),
+
             ],
         )

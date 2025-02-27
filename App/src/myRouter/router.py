@@ -3,6 +3,8 @@ from flet_route import Routing, path
 
 from pages.mainPage import MainPage
 from pages.order import Order
+from pages.inventory import Inventory
+from pages.entrance import Entrance
 
 class MyRouter:
     def __init__(self, page: ft.Page):
@@ -10,7 +12,8 @@ class MyRouter:
         self.app_routes = [
             path(url="/", clear=True, view=MainPage().view),
             path(url="/order", clear=False, view=Order().view),
-
+            path(url="/inventory", clear=False, view=Inventory().view),
+            path(url="/entrance", clear=False, view=Entrance().view),
         ]
 
         Routing(
@@ -18,3 +21,4 @@ class MyRouter:
             app_routes=self.app_routes
         )
         self.page.go(self.page.route)
+
