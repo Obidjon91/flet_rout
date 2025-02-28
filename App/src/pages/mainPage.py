@@ -13,7 +13,7 @@ class MainPage:
             bgcolor="#E2DBD5FF",
             padding=0,
             controls=[
-                Header(page=page, text="Main Page", btn_icon=ft.icons.MENU, btn_on_click=lambda _: page.go("/")),
+                Header(page=page, vizable=False, text="Main Page", btn_icon=ft.icons.MENU, btn_on_click=lambda _: page.go("/")),
                 ft.Container(
                     alignment=ft.alignment.Alignment(0.0, 0.0),
                     expand=True,

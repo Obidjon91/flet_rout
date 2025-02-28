@@ -28,7 +28,7 @@ class OrdersTest(ft.View):
         self.padding = 0
         self.bgcolor = "#E2DBD5FF"
         self.controls = [
-            Header(page=self.page, text="Test", btn_icon=ft.icons.BACK_HAND, btn_on_click=lambda _: page.go("/")),
+            Header(page=self.page, vizable=True, text="Test", btn_icon=ft.icons.BACK_HAND, btn_on_click=lambda _: page.go("/")),
         ]
 
     def view(self, page: ft.Page, params: Params, basket: Basket):
